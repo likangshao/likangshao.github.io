@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            position: relative;
+            /*transition: all 6s;*/
+            animation: gogo 6s infinite linear;
+        }
+        /*ul:hover {
+            transform: rotateX(720deg) rotateY(720deg);
+        }*/
+        @keyframes gogo {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(720deg) rotateY(720deg);
+            }
+        }
+
+        ul li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 36px;
+        }
+        ul li:nth-of-type(1){
+            background: rgba(0, 0, 255, 0.4);
+            transform: translateZ(100px);
+        }
+        ul li:nth-of-type(2){
+            background: rgba(0,255,0, 0.4);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        ul li:nth-of-type(3){
+            background: rgba(255, 0, 0, 0.4);
+            transform: rotateX(-180deg) translateZ(100px);
+        }
+        ul li:nth-of-type(4){
+            background: rgba(0, 255, 255, 0.4);
+            transform: rotateX(-270deg) translateZ(100px);
+        }
+        ul li:nth-of-type(5){
+            background: rgba(255, 0, 255, 0.4);
+            transform: rotateY(90deg) translateZ(100px);
+         }
+        ul li:nth-of-type(6){
+            background: rgba( 255, 255, 0,0.4);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>第一个</li>
+    <li>第二个</li>
+    <li>第三个</li>
+    <li>第四个</li>
+    <li>第五个</li>
+    <li>第六个</li>
+</ul>
+</body>
+</html>
